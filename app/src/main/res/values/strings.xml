@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Expand Vocabulary</string>
+    <string name="avalehe_tervitus">Welcome to discovering new words!</string>
+    <string name="avaleht_suvaline_sona">Random word:</string>
+
+    <string name="nupp_avaleht_jargmine_suvaline_sona">Next random word</string>
+
 </resources>

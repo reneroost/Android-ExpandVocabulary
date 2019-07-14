@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Laienda sõnavara</string>
+    <string name="avalehe_tervitus">Teretulemast uusi sõnu avastama!</string>
+    <string name="avaleht_suvaline_sona">Suvaline sõna:</string>
+
+    <string name="nupp_avaleht_jargmine_suvaline_sona">Järgmine suvaline sõna</string>
+
+</resources>

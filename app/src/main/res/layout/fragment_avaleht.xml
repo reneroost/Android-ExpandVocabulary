@@ -13,6 +13,8 @@
         android:theme="@style/TervitusTekst"
         android:layout_margin="16dp"/>
 
+    <View style="@style/EraldusjoonHorisontaalne"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -43,15 +45,14 @@
             android:theme="@style/AvalehtTekst"/>
     </LinearLayout>
 
-    <!--<TextView-->
-        <!--android:id="@+id/tekstivaade_test_vali"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="olen tekstivali"/>-->
-    <!--<Button-->
-        <!--android:id="@+id/nupp_test_nupp"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="olen nupp"/>-->
+    <Button
+        android:id="@+id/nupp_avaleht_jargmine_sona"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:drawableStart="@drawable/jargmine_suvaline_sona"
+        android:text="@string/nupp_avaleht_jargmine_suvaline_sona"/>
+
+    <View style="@style/EraldusjoonHorisontaalne"/>
 
 </LinearLayout>

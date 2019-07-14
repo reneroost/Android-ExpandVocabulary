@@ -2,9 +2,11 @@ package ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import ee.android.reneroost.isiklikprojekt.expandvocabulary.AvalehtFragment;
 import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikAndmebaasiSkeem.SonastikuTabel;
 
 public class SonastikAndmebaasiAbistaja extends SQLiteOpenHelper {
@@ -54,6 +56,13 @@ public class SonastikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sonapaariVaartused.put(SonastikuTabel.Tulbad.EESTIKEELES, eestiKeeles);
 
         andmebaas.insert(SonastikuTabel.NIMI, null, sonapaariVaartused);
+    }
+
+    public int saaSonadeHulk() {
+        SQLiteDatabase andmebaas = this.getReadableDatabase();
+        long hulk = DatabaseUtils.queryNumEntries(andmebaas, SonastikuTabel.NIMI);
+        andmebaas.close();
+        return (int) hulk;
     }
 
 }
