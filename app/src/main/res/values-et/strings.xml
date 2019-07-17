@@ -5,5 +5,7 @@
     <string name="avaleht_suvaline_sona">Suvaline sõna:</string>
 
     <string name="nupp_avaleht_jargmine_suvaline_sona">Järgmine suvaline sõna</string>
+    <string name="nupp_avaleht_kuva_koik_sonad">Näita kõiki sõnu</string>
+    <string name="nupp_avaleht_alusta_sona_mangu">Käivita sõnamäng</string>
 
 </resources>

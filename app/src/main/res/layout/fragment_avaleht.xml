@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="@string/avaleht_suvaline_sona"
         android:textColor="@color/colorPrimary"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:theme="@style/AvalehtTekst"/>
@@ -54,5 +54,21 @@
         android:text="@string/nupp_avaleht_jargmine_suvaline_sona"/>
 
     <View style="@style/EraldusjoonHorisontaalne"/>
+
+    <Button
+        android:id="@+id/nupp_avaleht_kuva_koik_sonad"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:drawableStart="@drawable/kaks_tulpa"
+        android:text="@string/nupp_avaleht_kuva_koik_sonad"/>
+
+    <Button
+        android:id="@+id/nupp_avaleht_kuva_koik_sonad"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="8dp"
+        android:drawableStart="@drawable/alusta_mangu"
+        android:text="@string/nupp_avaleht_alusta_sona_mangu"/>
 
 </LinearLayout>
