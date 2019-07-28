@@ -64,7 +64,7 @@
         android:text="@string/nupp_avaleht_kuva_koik_sonad"/>
 
     <Button
-        android:id="@+id/nupp_avaleht_kuva_koik_sonad"
+        android:id="@+id/nupp_avaleht_alusta_mangu"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_margin="8dp"

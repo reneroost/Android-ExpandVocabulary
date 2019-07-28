@@ -6,8 +6,7 @@ import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import ee.android.reneroost.isiklikprojekt.expandvocabulary.AvalehtFragment;
-import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikAndmebaasiSkeem.SonastikuTabel;
+import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikuTabel;
 
 public class SonastikAndmebaasiAbistaja extends SQLiteOpenHelper {
 

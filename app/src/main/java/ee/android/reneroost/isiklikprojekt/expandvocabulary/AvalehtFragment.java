@@ -1,38 +1,34 @@
 package ee.android.reneroost.isiklikprojekt.expandvocabulary;
 
-import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteException;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Random;
 
 import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikAndmebaasiAbistaja;
-import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikAndmebaasiSkeem.SonastikuTabel;
+import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikuTabel;
 
 public class AvalehtFragment extends Fragment {
 
-    TextView suvalineIngliseKeelesTekstiVaade;
-    TextView suvalineEestiKeelesTekstiVaade;
-    String[] sonapaar;
+    private TextView suvalineIngliseKeelesTekstiVaade;
+    private TextView suvalineEestiKeelesTekstiVaade;
+    private String[] sonapaar;
 
-    int suvalineArv = 0;
-    int uusSuvalineArv = 0;
+    private int suvalineArv = 0;
 
     @Override
-    public View onCreateView(LayoutInflater taispuhuja, ViewGroup konteiner, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater taispuhuja, ViewGroup konteiner, Bundle savedInstanceState) {
         View vaade = taispuhuja.inflate(R.layout.fragment_avaleht, konteiner, false);
 
         suvalineIngliseKeelesTekstiVaade = vaade.findViewById(R.id.tekstivaade_avaleht_suvaline_sona_inglise_keeles);
@@ -54,7 +50,7 @@ public class AvalehtFragment extends Fragment {
         return vaade;
     }
 
-    public String[] votaSuvalineSonapaar() {
+    private String[] votaSuvalineSonapaar() {
 
         Cursor kursor = null;
         String[] sonapaar = new String[2];
@@ -62,6 +58,7 @@ public class AvalehtFragment extends Fragment {
         SonastikAndmebaasiAbistaja sonastikAndmebaasiAbistaja = new SonastikAndmebaasiAbistaja(getActivity());
 
         Random suvaline = new Random();
+        int uusSuvalineArv;
         do {
             uusSuvalineArv = suvaline.nextInt(sonastikAndmebaasiAbistaja.saaSonadeHulk()) + 1;
         } while (suvalineArv == uusSuvalineArv);
@@ -92,7 +89,7 @@ public class AvalehtFragment extends Fragment {
         return sonapaar;
     }
 
-    public void kuvaSuvalineSonapaar(String[] sonapaar) {
+    private void kuvaSuvalineSonapaar(String[] sonapaar) {
         if (sonapaar[0].length() > 12) {
             suvalineIngliseKeelesTekstiVaade.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18f);
         } else {
