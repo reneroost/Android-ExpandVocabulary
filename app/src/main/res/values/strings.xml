@@ -7,7 +7,4 @@
     <string name="nupp_avaleht_kuva_koik_sonad">Show list of all words</string>
     <string name="nupp_avaleht_alusta_sona_mangu">Let\'s begin the game</string>
 
-    <string name="debug_tekstiline_piir_algus">enne fragment_avaleht\'e</string>
-    <string name="debug_tekstiline_piir_lopp">pärast fragment_avaleht\'e</string>
-
 </resources>

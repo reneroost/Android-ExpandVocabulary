@@ -21,6 +21,22 @@ import ee.android.reneroost.isiklikprojekt.expandvocabulary.andmebaas.SonastikuT
 
 public class AvalehtFragment extends Fragment {
 
+    private static avalehtFragmentKuular kuular;
+
+    private void vahetaAkent() {
+        if(kuular != null) {
+            kuular.naitaKoikiSonu();
+        }
+    }
+
+    public interface avalehtFragmentKuular {
+        void naitaKoikiSonu();
+    }
+
+    public static void maaraAvalehtFragmentKuular(avalehtFragmentKuular kuular) {
+        AvalehtFragment.kuular = kuular;
+    }
+
     private TextView suvalineIngliseKeelesTekstiVaade;
     private TextView suvalineEestiKeelesTekstiVaade;
     private String[] sonapaar;
@@ -37,13 +53,22 @@ public class AvalehtFragment extends Fragment {
         sonapaar = votaSuvalineSonapaar();
         kuvaSuvalineSonapaar(sonapaar);
 
-        Button olenNuppNupp = vaade.findViewById(R.id.nupp_avaleht_jargmine_sona);
-        olenNuppNupp.setOnClickListener(new View.OnClickListener() {
+        Button jargmineSonaNupp = vaade.findViewById(R.id.nupp_avaleht_jargmine_sona);
+        jargmineSonaNupp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 sonapaar = votaSuvalineSonapaar();
                 kuvaSuvalineSonapaar(sonapaar);
+            }
+        });
+
+        Button kuvaKoikSonadNupp = vaade.findViewById(R.id.nupp_avaleht_kuva_koik_sonad);
+        kuvaKoikSonadNupp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                vahetaAkent();
             }
         });
 

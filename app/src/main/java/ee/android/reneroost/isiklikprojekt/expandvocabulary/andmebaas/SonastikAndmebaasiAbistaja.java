@@ -21,10 +21,13 @@ public class SonastikAndmebaasiAbistaja extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase andmebaas) {
         andmebaas.execSQL("create table " +
                         SonastikuTabel.NIMI + "(" +
-                        " _id integer primary key autoincrement, " +
+                        SonastikuTabel.Tulbad.ID + " integer primary key autoincrement, " +
                         SonastikuTabel.Tulbad.INGLISEKEELES + ", " +
                         SonastikuTabel.Tulbad.EESTIKEELES + ")"
                 );
+
+
+
         sisestaSonapaar(andmebaas, "insidious", "ahvatlev");
         sisestaSonapaar(andmebaas, "adumbrate", "üldjoontes ette kujutama");
         sisestaSonapaar(andmebaas, "slant", "kallak");
@@ -40,6 +43,32 @@ public class SonastikAndmebaasiAbistaja extends SQLiteOpenHelper {
         sisestaSonapaar(andmebaas, "volatile", "püsimatu");
         sisestaSonapaar(andmebaas, "swivel", "pöörlema");
         sisestaSonapaar(andmebaas, "augmentation", "juurdekasv");
+        sisestaSonapaar(andmebaas, "gizmo", "abivahend");
+        sisestaSonapaar(andmebaas, "jettison", "(lasti) üle parda heitma");
+        sisestaSonapaar(andmebaas, "warp", "vääne");
+        sisestaSonapaar(andmebaas, "venerable", "kõrgeauline");
+        sisestaSonapaar(andmebaas, "behest", "korraldus");
+        sisestaSonapaar(andmebaas, "ancillary", "kõrval-");
+        sisestaSonapaar(andmebaas, "convoluted", "kurruline");
+        sisestaSonapaar(andmebaas, "gloomy", "sünge");
+        sisestaSonapaar(andmebaas, "abate", "sumbuma");
+        sisestaSonapaar(andmebaas, "tidbit", "maiuspala");
+        sisestaSonapaar(andmebaas, "grout", "krohv");
+        sisestaSonapaar(andmebaas, "terse", "napisõnaline");
+        sisestaSonapaar(andmebaas, "ambivalent", "vastakas");
+        sisestaSonapaar(andmebaas, "boon", "õnnistus");
+        sisestaSonapaar(andmebaas, "unruly", "korratu");
+        sisestaSonapaar(andmebaas, "whimsical", "pentsik");
+        sisestaSonapaar(andmebaas, "formidable", "aukartustäratav");
+        sisestaSonapaar(andmebaas, "confectionery", "kommipood");
+        sisestaSonapaar(andmebaas, "ebullient", "pulbitsev");
+        sisestaSonapaar(andmebaas, "superlative", "ülivõrre");
+        sisestaSonapaar(andmebaas, "gleeful", "lustlik");
+        sisestaSonapaar(andmebaas, "bespoken", "mahakuulutatud");
+        sisestaSonapaar(andmebaas, "edible", "söödav");
+        sisestaSonapaar(andmebaas, "sporadic", "juhuti esinev");
+        sisestaSonapaar(andmebaas, "unsung", "ununenud");
+
 
     }
 

@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_margin="8dp"
-        android:drawableStart="@drawable/jargmine_suvaline_sona"
+        android:drawableStart="@drawable/jargmine_suvaline_sona_ikoon"
         android:text="@string/nupp_avaleht_jargmine_suvaline_sona"/>
 
     <View style="@style/EraldusjoonHorisontaalne"/>
@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_margin="8dp"
-        android:drawableStart="@drawable/kaks_tulpa"
+        android:drawableStart="@drawable/naita_koiki_sonu_ikoon"
         android:text="@string/nupp_avaleht_kuva_koik_sonad"/>
 
     <Button
@@ -68,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_margin="8dp"
-        android:drawableStart="@drawable/alusta_mangu"
+        android:drawableStart="@drawable/alusta_mangu_ikoon"
         android:text="@string/nupp_avaleht_alusta_sona_mangu"/>
 
 </LinearLayout>
